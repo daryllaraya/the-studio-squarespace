@@ -1,0 +1,44 @@
+/* BANNER */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 440px;
+
+  &__content {
+    position: relative;
+    padding-top: $base-padding * 2.5;
+  }
+
+  &__title {
+    color: $almond;
+    font-family: $font-family-freight;
+    font-size: $base-font-size * 3;
+    line-height: $base-font-size * 3;
+    letter-spacing: 2px;
+
+    &--italic {
+      font-family: $font-family-freight-italic;
+    }
+  }
+
+  &__subtitle {
+    color: $secondary;
+    font-size: calc(#{$base-font-size} - 3px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: $base-margin * 1.2;
+    font-weight: bold;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: #dd9876;
+      width: 85px;
+      height: 1px;
+      top: 0;
+      left: 0;
+    }
+  }
+}

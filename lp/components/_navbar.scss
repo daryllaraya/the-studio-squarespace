@@ -1,0 +1,52 @@
+/* NAVBAR */
+
+.navbar-dark {
+  .navbar-brand {
+    color: $secondary;
+    font-family: $font-family-freight;
+    font-size: $base-font-size * 1.8;
+    letter-spacing: 2px;
+    transition: color .15s ease-in-out;
+  
+    &:hover, &:focus {
+      color: $almond;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $almond;
+      border-bottom: 1px solid lighten($primary, 5);
+      text-transform: uppercase;
+      font-size: calc(#{$base-font-size} - 6px);
+      letter-spacing: 3px;
+    
+      &:hover, &:focus {
+        color: $white;
+      }
+    }
+
+    .btn-secondary {
+      color: $almond;
+      background-color: unset;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url(/images/svg/hamburger-icon.svg);
+  }
+  
+}
+
+.navbar-collapse {
+  flex-grow: unset;
+}

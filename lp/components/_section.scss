@@ -255,6 +255,11 @@
       margin-bottom: $base-margin * 2;
       text-transform: capitalize;
       font-weight: normal;
+
+      &:before {
+        content: "";
+        position: unset;
+      }
     }
 
     .section__copy {

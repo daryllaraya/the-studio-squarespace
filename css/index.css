@@ -396,6 +396,10 @@ img {
   text-transform: capitalize;
   font-weight: normal;
 }
+.section__form .section__title:before {
+  content: "";
+  position: unset;
+}
 .section__form .section__copy {
   color: #f8f2ee;
   font-size: 1rem;

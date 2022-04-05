@@ -1,14 +1,28 @@
-/* BANNER */
+@use 'abstracts' as *;
 
+/* BANNER */
 .banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 440px;
 
+  @include lg {
+    padding-left: $base-padding * 2;
+    max-width: 80%;
+  }
+
+  @include xl {
+    padding-left: $base-padding * 8;
+  }
+
   &__content {
     position: relative;
     padding-top: $base-padding * 2.5;
+
+    @include lg {
+      padding-top: 0;
+    }
   }
 
   &__title {
@@ -17,6 +31,11 @@
     font-size: $base-font-size * 3;
     line-height: $base-font-size * 3;
     letter-spacing: 2px;
+
+    @include lg {
+      font-size: $base-font-size * 4.3;
+      line-height: $base-font-size * 4.8;
+    }
 
     &--italic {
       font-family: $font-family-freight-italic;
@@ -39,6 +58,13 @@
       height: 1px;
       top: 0;
       left: 0;
+
+      @include lg {
+        width: 70px;
+        height: 1px;
+        top: 0;
+        left: -95px;
+      }
     }
   }
 }

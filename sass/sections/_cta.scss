@@ -1,0 +1,72 @@
+@use 'abstracts' as *;
+
+/* CTA */
+.cta {
+  &__content {
+    position: relative;
+  }
+
+  .section__title {
+    margin-bottom: $base-margin * 1.5;
+    padding-top: $base-padding * 3;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    @include lg {
+      padding-top: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: #dd9876;
+      width: 85px;
+      height: 1px;
+      top: 0;
+      left: 0;
+
+      @include lg {
+        width: 70px;
+        height: 1px;
+        top: 0;
+        left: -95px;
+      }
+    }
+  }
+
+  .section__copy {
+    color: $almond;
+    font-family: $font-family-freight;
+    font-size: $base-font-size * 3;
+    line-height: $base-font-size * 3;
+    letter-spacing: 2px;
+    padding-right: 0;
+
+    @include lg {
+      font-size: $base-font-size * 4.3;
+      line-height: $base-font-size * 4.8;
+      padding-right: $base-padding * 5;
+    }
+
+    &--italic {
+      font-family: $font-family-freight-italic;
+    }
+  }
+
+  .btn-secondary {
+    border-radius: 0;
+    font-size: calc(#{$base-font-size} - 5px);
+    letter-spacing: 4px;
+    padding: $base-padding * 1.2 $base-padding * 2.2;
+    text-transform: uppercase;
+  }
+}
+
+.bg-army-green {
+  background-color: $primary;
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,6 +1,6 @@
-// IMPORT LOCAL FONTS
+/* IMPORT LOCAL FONTS */
 
-// FreightDispProLight-Regular
+/* FreightDispProLight-Regular */
 @font-face {
   font-family: 'FreightDispProLight-Regular';
   src: url('/fonts/FreightDispProLight-Regular.woff2') format('woff2'),
@@ -8,7 +8,7 @@
        url('/fonts/FreightDispProLight-Regular.ttf') format('truetype');     
 }
 
-// FreightDispProLight-Italic
+/* FreightDispProLight-Italic */
 @font-face {
   font-family: 'FreightDispProLight-Italic';
   src: url('/fonts/FreightDispProLight-Italic.woff2') format('woff2'),
@@ -16,35 +16,10 @@
        url('/fonts/FreightDispProLight-Italic.ttf') format('truetype');     
 }
 
-// FuturaLT
+/* FuturaLT */
 @font-face {
   font-family: 'FuturaLT';
   src: url('/fonts/FuturaLT.woff2') format('woff2'),
        url('/fonts/FuturaLT.woff') format('woff'),
        url('/fonts/FuturaLT.ttf') format('truetype');
-}
-
-/* RESET STYLES */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'FuturaLT', sans-serif;
-}
-
-ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  transition: color .15s ease-in-out;
-}
-
-img {
-  max-width: 100%;
 }

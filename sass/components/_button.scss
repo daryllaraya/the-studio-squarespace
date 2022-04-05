@@ -1,5 +1,6 @@
-/* BUTTON */
+@use 'abstracts' as *;
 
+/* BUTTON */
 .btn-primary {
   background-color: $primary;
   border-color: $primary;

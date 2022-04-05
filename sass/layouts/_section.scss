@@ -1,0 +1,55 @@
+@use 'abstracts' as *;
+
+/* SECTIONS */
+.section {
+  padding-top: $base-padding * 4;
+  padding-bottom: $base-padding * 4;
+
+  @include lg {
+    padding: $base-padding * 6 $base-padding * 2 $base-padding * 6 $base-padding * 2;
+  }
+
+  @include xl {
+    padding: $base-padding * 6 $base-padding * 8 $base-padding * 6 $base-padding * 8;
+  }
+
+  &__title {
+    color: $secondary;
+    font-size: calc(#{$base-font-size} - 3px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: $base-margin * 3.5;
+    padding-bottom: $base-padding * 2.5;
+    border-bottom: 1px solid lighten($almond, 5);
+    font-weight: bold;
+  }
+
+  &__copy {
+    color: $black;
+    font-family: $font-family-freight;
+    font-size: $base-font-size * 2;
+    letter-spacing: 2px;
+    line-height: $base-font-size * 2.5;
+    margin-bottom: $base-margin * 3;
+    text-transform: capitalize;
+
+    @include lg {
+      font-size: $base-font-size * 2.5;
+      line-height: $base-font-size * 3;
+    }
+  }
+
+  &__btn {
+    color: $secondary;
+    border-bottom: 1px solid lighten($almond, 5);
+    font-size: calc(#{$base-font-size} - 3px);
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-bottom: calc(#{$base-padding} - 10px);
+    text-transform: uppercase;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

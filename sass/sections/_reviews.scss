@@ -1,0 +1,181 @@
+@use 'abstracts' as *;
+
+/* REVIEWS */
+.reviews {
+  .section__title {
+    margin-bottom: $base-margin * 4.5;
+    padding-top: $base-padding * 3;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    @include lg {
+      padding-top: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: lighten($almond, 5);
+      width: 85px;
+      height: 1px;
+      top: 0;
+      left: 0;
+
+      @include lg {
+        width: 70px;
+        height: 1px;
+        top: 0;
+        left: -95px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__carousel {
+    .carousel-item {
+      p {
+        color: $black;
+        font-family: $font-family-freight;
+        font-size: $base-font-size * 2;
+        letter-spacing: 2px;
+        line-height: $base-font-size * 2.5;
+        margin-bottom: $base-margin * 3;
+        text-transform: inherit;
+
+        @include lg {
+          font-size: $base-font-size * 2.5;
+          line-height: $base-font-size * 3;
+        }
+
+        .client-name {
+          font-family: $font-family-freight-italic;
+        }
+      }
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+      top: -15%;
+      bottom: unset;
+      width: 5%;
+
+      @include lg {
+        top: -30%;
+        width: 3%;
+      }
+    }
+
+    .carousel-control-next {
+      right: -1.5%;
+    }
+
+    .carousel-control-prev {
+      left: 90%;
+
+      @include lg {
+        left: 94%;
+      }
+
+      @include xl {
+        left: 95%;
+      }
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    .carousel-control-prev-icon {
+      background-image: url(/assets/svg/prev-icon.svg);
+    }
+
+    .carousel-control-next-icon {
+      background-image: url(/assets/svg/next-icon.svg);
+    }
+  }
+
+  &__form {
+    background-color: $secondary;
+    padding: $base-padding * 3 $base-padding * 3 $base-padding * 4 $base-padding * 3;
+    margin-bottom: 0;
+    text-align: center;
+
+    @include lg {
+      margin-bottom: $base-margin * 2;
+    }
+
+    .section__title {
+      color: $vista-white;
+      font-family: $font-family-freight;
+      font-size: $base-font-size * 2;
+      line-height: $base-font-size * 2;
+      letter-spacing: 1px;
+      padding-top: 0;
+      margin-bottom: $base-margin * 2;
+      text-transform: capitalize;
+      font-weight: normal;
+
+      &:before {
+        content: "";
+        position: unset;
+      }
+    }
+
+    .section__copy {
+      color: $vista-white;
+      font-size: $base-font-size;
+      line-height: $base-font-size;
+      letter-spacing: 1px;
+      text-transform: inherit;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: $font-family-freight;
+
+      @include lg {
+        flex-direction: row;
+      }
+
+      .form-control {
+        border: none;
+        border-radius: 0;
+        color: $black;
+        margin-bottom: $base-margin;
+        width: auto;
+        padding: $base-padding $base-padding * 1.2;
+
+        @include lg {
+          margin-right: $base-margin;
+          margin-bottom: 0;
+          width: 200px;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      input {
+        font-size: calc(#{$base-font-size} - 2px);
+      }
+
+      .btn-primary {
+        border-radius: 0;
+        padding: $base-padding;
+        line-height: $base-font-size * 1.188;
+        text-transform: uppercase;
+
+        @include lg {
+          padding-left: $base-padding * 2.5;
+          padding-right: $base-padding * 2.5;
+        }
+      }
+    }
+  }
+}

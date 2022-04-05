@@ -1,4 +1,12 @@
+@use 'abstracts' as *;
+
 /* NAVBAR */
+.navbar {
+  @include lg {
+    padding-top: $base-padding * 2;
+    padding-bottom: 0;
+  }
+}
 
 .navbar-dark {
   .navbar-brand {
@@ -7,6 +15,10 @@
     font-size: $base-font-size * 1.8;
     letter-spacing: 2px;
     transition: color .15s ease-in-out;
+
+    @include lg {
+      font-size: $base-font-size * 2;
+    }
   
     &:hover, &:focus {
       color: $almond;
@@ -20,6 +32,10 @@
       text-transform: uppercase;
       font-size: calc(#{$base-font-size} - 6px);
       letter-spacing: 3px;
+
+      @include lg {
+        border-bottom: none;
+      }
     
       &:hover, &:focus {
         color: $white;
@@ -29,6 +45,23 @@
     .btn-secondary {
       color: $almond;
       background-color: unset;
+
+      @include lg {
+        background-color: $secondary;
+        color: $white;
+        padding-left: $base-padding * 1.5;
+        padding-right: $base-padding * 1.5;
+        margin-left: $base-margin;
+
+        &:hover, &:focus, &:active {
+          background-color: darken($secondary, 5);
+          border-color: lighten($secondary, 5);
+        }
+
+        &:focus, &:active:focus {
+          box-shadow: none;
+        }
+      }
     }
   }
 

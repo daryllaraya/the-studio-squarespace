@@ -1,0 +1,66 @@
+@use 'abstracts' as *;
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: none;
+  column-gap: $base-margin * 4;
+  padding-bottom: $base-padding * 7;
+
+  @include lg {
+    grid-template-columns: 50% auto;
+  }
+
+  @include xl {
+    grid-template-columns: 40% auto;
+    padding-bottom: $base-padding * 12;
+  }
+  
+  &__img {
+    margin-top: $base-margin * 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include lg {
+      margin-top: $base-margin * 11;
+      margin-left: $base-margin * 5;
+      justify-content: flex-end;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      background-color: $secondary;
+      width: 90%;
+      height: 100%;
+      z-index: -1;
+
+      @include lg {
+        top: 0;
+        width: 70%;
+        height: 300px;
+      }
+
+      @include xl {
+        width: 58.5%;
+        height: 370px;
+      }
+    }
+  
+    img {
+      align-self: flex-start;
+      max-width: 100%;
+
+      @include lg {
+        margin-right: $base-margin * 6;
+      }
+
+      @include xl {
+        margin-right: $base-margin * 9.5;
+        max-width: 75%;
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@use 'abstracts' as *;
+
 /* FOOTER */
 .bg-vista-white {
   .footer__nav {
@@ -11,8 +13,16 @@
   column-gap: $base-margin * 4;
   font-family: $font-family-freight;
 
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &__col {
     margin-bottom: $base-margin * 3;
+
+    @include lg {
+      margin-bottom: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -25,6 +35,12 @@
     line-height: $base-font-size * 2;
     letter-spacing: 2px;
     margin-bottom: $base-margin * 2;
+
+    @include lg {
+      font-size: $base-font-size * 2.5;
+      line-height: $base-font-size * 3;
+      margin-bottom: $base-margin * 3;
+    }
   
     &--italic {
       font-family: $font-family-freight-italic;
@@ -41,6 +57,11 @@
     display: flex;
     flex-direction: column;
     margin-top: $base-margin * 2.5;
+
+    @include lg {
+      flex-direction: row;
+      margin-top: $base-margin * 3.5;
+    }
   
     .form-control {
       border: none;
@@ -48,6 +69,12 @@
       margin-bottom: $base-margin;
       width: auto;
       padding: $base-padding $base-padding * 1.2;
+
+      @include lg {
+        margin-bottom: 0;
+        margin-right: $base-margin;
+        width: 215px;
+      }
   
       &:focus {
         box-shadow: none;
@@ -63,6 +90,11 @@
       padding: $base-padding;
       line-height: $base-font-size * 1.188;
       text-transform: uppercase;
+
+      @include lg {
+        padding-left: $base-padding * 2.5;
+        padding-right: $base-padding * 2.5;
+      }
     }
   }
 
@@ -81,6 +113,11 @@
     border-top: 2px solid lighten($vista-white, 5);
     margin-left: 0;
     margin-right: 0;
+
+    @include lg {
+      margin-left: $base-margin * 8;
+      margin-right: $base-margin * 8;
+    }
   }
 
   &__nav {
@@ -90,6 +127,11 @@
     flex-direction: column;
     justify-content: space-between;
     font-family: $font-family-freight;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+      flex-direction: row;
+    }
   
     .navbar-nav {
       flex-direction: row;
@@ -112,6 +154,10 @@
         padding-top: 0;
         padding-bottom: 0;
         text-transform: uppercase;
+
+        @include lg {
+          font-size: $base-font-size;
+        }
   
         &:hover {
           color: $secondary;
@@ -127,6 +173,11 @@
     color: $primary;
     margin-top: $base-margin * 2;
     margin-bottom: 0;
+
+    @include lg {
+      font-size: $base-font-size;
+      margin-top: 0;
+    }
 
     a {
       color: $primary;

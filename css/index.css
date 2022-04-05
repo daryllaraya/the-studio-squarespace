@@ -112,7 +112,7 @@ body {
   box-shadow: none;
 }
 .navbar-dark .navbar-toggler-icon {
-  background-image: url(/images/svg/hamburger-icon.svg);
+  background-image: url(/assets/svg/hamburger-icon.svg);
 }
 
 .navbar-collapse {
